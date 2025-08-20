@@ -17,9 +17,9 @@ PHOTOS_DIR = "photos"
 
 # Реквизиты для оплаты
 PAYMENT_DETAILS = {
-    "₿ Bitcoin": "bc1qexamplebtcaddress",
-    "💵 USDT": "TRC20_EXAMPLE_ADDRESS",
-    "💳 Перевод на карту": "0000 0000 0000 0000 (Иван И.)",
+    "₿ Bitcoin": "bc1qx0uumahy0ztyenqh0wtwyunkw96n5jwu7symt6",
+    "💵 USDT": "TA4PzsvPCVGW8obsSZ97Fot2YZFZp2b45F",
+    "💳 Перевод на карту": "2204320309969592 ОЗОН БАНК (Ангелина П.)",
 }
 
 # Приветствие
@@ -184,7 +184,7 @@ def kb_order_final() -> types.InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text="🏠 Главное меню", callback_data="back:main")
     kb.button(text="❌ Отменить заказ", callback_data="order:cancel")
-    kb.button(text="👨‍💻 Оператор", url="https://t.me/skyw_scm")
+    kb.button(text="👨‍💻 Оператор", url="https://t.me/h2h_operator")
     kb.adjust(2, 1)
     return kb.as_markup()
 
@@ -336,7 +336,7 @@ async def on_payment(cb: types.CallbackQuery):
         f"Район: <b>{district}</b>\n"
         f"Оплата: <b>{pay_label}</b>\n\n"
         f"💳 <b>Реквизиты</b>: <code>{details}</code>\n"
-        f"После оплаты напишите <a href='https://t.me/skyw_scm'>оператору</a>."
+        f"После оплаты напишите <a href='https://t.me/h2h_operator'>оператору</a>."
     )
 
     # Итог показываем как текст: заменим сообщение целиком (если это фото — сначала удалим)
